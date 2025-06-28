@@ -1,0 +1,59 @@
+ion-toolbar {
+  --background: #ffffff;
+  --color: #000000;
+  font-weight: bold;
+}
+
+ion-title {
+  font-size: 18px;
+}
+
+.btn-back {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.label-text {
+  flex: 1;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.icon-default {
+  font-size: 22px;
+  color: #4a4a4a;
+}
+
+.icon-red {
+  font-size: 22px;
+  color: red;
+}
+
+ion-button[color="dark"] {
+  --background: #3e4a44;
+  --color: #fff;
+  padding: 0 16px;
+  height: 34px;
+  font-weight: 500;
+}
+
+ion-button[color="danger"] {
+  --background: #ff1a1a;
+  --color: #fff;
+  padding: 0 16px;
+  height: 34px;
+  font-weight: 500;
+}

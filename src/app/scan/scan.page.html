@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- Dihapus: ion-menu-button -->
+    <ion-title>Scan Karyawan</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="notifications-outline" style="font-size: 20px; color: #435851;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button fill="clear" color="medium" class="btn-back" size="small">
+    <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+    Kembali
+  </ion-button>
+
+  <div class="list-container">
+
+    <div class="list-item">
+      <ion-icon name="people-outline" class="icon-default"></ion-icon>
+      <div class="label-text">
+        Data Karyawan yang telah menerima makan
+      </div>
+      <ion-button color="dark" shape="round" size="small">
+        Lihat
+      </ion-button>
+    </div>
+
+    <div class="list-item">
+      <ion-icon name="people-outline" class="icon-red"></ion-icon>
+      <div class="label-text">
+        Data Karyawan yang belum menerima makan
+      </div>
+      <ion-button color="danger" shape="round" size="small">
+        Lihat
+      </ion-button>
+    </div>
+
+  </div>
+
+</ion-content>

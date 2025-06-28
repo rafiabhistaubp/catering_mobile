@@ -1,0 +1,28 @@
+ion-content {
+  display: flex;
+  justify-content: center; /* Memusatkan konten secara horizontal */
+  align-items: center; /* Memusatkan konten secara vertikal */
+  flex-direction: column;
+  height: 100%; /* Pastikan konten memenuhi seluruh tinggi layar */
+  text-align: center;
+  padding: 10px;
+  --background: #ffffff;
+}
+
+canvas {
+  margin-top: 50px;
+  max-width: 100%; /* Pastikan canvas dapat menyesuaikan dengan lebar layar */
+  max-height: 100%; /* Pastikan canvas dapat menyesuaikan dengan tinggi layar */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+div {
+  font-size: 18px;
+  color: black; /* Menyesuaikan warna teks dengan tema gelap */
+  margin-top: 10px;
+}

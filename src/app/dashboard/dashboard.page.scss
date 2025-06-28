@@ -1,0 +1,225 @@
+ion-content {
+  --background: #ffffff;
+}
+ion-header {
+  --background: #435851;
+  --color: #ffffff;
+}
+
+ion-card-header {
+  background-color: #435851;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+ion-button {
+  font-size: 14px;
+  --color: #ffffff;
+}
+
+.lihat-semua-wrapper {
+  font-size: 14px;
+  color: #3d485c;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.lihat-semua-btn {
+  font-size: 14px;
+  --color: #3880ff;
+  text-transform: none;
+  height: auto;
+  margin: 0;
+}
+
+.lihat-semua-btn:hover {
+  text-decoration: underline;
+}
+
+ion-button[fill="solid"] {
+  background-color: #435851;
+  --background: #435851;
+}
+
+ion-badge.notif-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.custom-button {
+  --background: #435851;
+  --color: #ffffff;
+  border-radius: 20px;
+  height: 60px;
+  font-size: 13px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-button ion-icon {
+  margin-right: 6px;
+  font-size: 18px;
+}
+
+.notif-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding: 0 8px;
+}
+
+.lihat-semua {
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+}
+
+.card-section {
+  margin: 6px 0 16px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  height: 35px;
+  background-color: #435851;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-body {
+  background-color: #f3f0ea;
+  padding: 12px;
+}
+
+ion-list {
+  padding: 0;
+}
+
+ion-item {
+  padding: 10px 0;
+}
+
+ion-item ion-label {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+td {
+  padding-top: 6px;
+}
+
+ion-tab-bar {
+  --background: #f3f0ea;
+  --color: #435851;
+  --color-selected: #435851;
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-top: 6px;
+}
+
+.center-scan-button {
+  position: relative;
+  top: -20px;
+}
+
+.scan-circle {
+  background-color: #435851;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scan-circle ion-icon {
+  font-size: 26px;
+  color: white;
+}
+
+.judul-tengah {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.lihat-semua-wrapper {
+  color: #3d485c;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  margin-top: 24px;
+}
+
+.lihat-semua-btn {
+  font-size: 14px;
+  --color: #3880ff;
+  text-transform: none;
+  height: auto;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lihat-semua-btn:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,35 @@
+<ion-content class="ion-padding">
+  <div class="container">
+    <p class="welcome">Selamat Datang!</p>
+
+    <div class="switch">
+      <ion-button expand="block" fill="solid" shape="round" class="btn-masuk" routerLink="/karyawan">
+        Masuk
+      </ion-button>
+      <ion-button expand="block" fill="clear" shape="round" class="btn-daftar">Daftar</ion-button>
+      
+    </div>
+
+    <h2 class="title">Daftar</h2>
+    <ion-icon name="log-in-outline" class="login-icon"></ion-icon>
+
+    <ion-item lines="none" class="input-box">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input ></ion-input>
+      <ion-icon name="mail-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" class="input-box">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input  type="password"></ion-input>
+      <ion-icon name="paper-plane-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item class="remember-box hidden-checkbox" lines="none">
+      <ion-checkbox slot="start" disabled></ion-checkbox>
+      <ion-label>Remember me</ion-label>
+    </ion-item>    
+
+    <ion-button expand="block" shape="round" class="login-btn" >Daftar</ion-button>
+  </div>
+</ion-content>

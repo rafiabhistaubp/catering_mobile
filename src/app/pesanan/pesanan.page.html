@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- Dihapus: ion-menu-button -->
+    <ion-title>Pesanan Makanan</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="notifications-outline" style="font-size: 20px; color: #435851;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Kembali -->
+  <ion-button fill="clear" color="medium" class="btn-back" size="small">
+    <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+    Kembali
+  </ion-button>
+
+  <!-- Deskripsi -->
+  <div class="desc-line">
+    <ion-icon name="cart-outline"></ion-icon>
+    <span>Daftar pesanan makanan untuk karyawan</span>
+  </div>
+
+  <!-- Filter -->
+  <div class="filter-wrapper">
+    <ion-button class="filter-btn" size="small">
+      <ion-icon slot="start" name="funnel-outline"></ion-icon>
+      Filter
+    </ion-button>
+  </div>
+
+  <!-- Kotak Besar -->
+  <div class="card-box">
+    <div class="card-title">Pesanan Makanan</div>
+
+    <div *ngFor="let item of orders" class="row">
+      <div class="left">
+        <div class="jumlah">{{ item.jumlah }}</div>
+        <div class="porsi">porsi</div>
+      </div>
+      <div class="right">
+        <div class="nama">{{ item.nama }}</div>
+        <div class="tanggal">{{ item.tanggal }}</div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

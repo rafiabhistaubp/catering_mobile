@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Scan Barcode</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <video #video width="100%" height="auto"></video>
+
+  <ion-button expand="full" (click)="startScanner()">Mulai Scan</ion-button>
+
+  <ion-text *ngIf="barcodeResult">
+    <p>Hasil Scan: {{ barcodeResult }}</p>
+  </ion-text>
+</ion-content>

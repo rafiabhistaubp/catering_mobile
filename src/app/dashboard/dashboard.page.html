@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- Dihapus: ion-menu-button -->
+    <ion-title>Halo Koki</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="notifications-outline" style="font-size: 20px; color: #435851;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-around">
+      <ion-col size="5.5">
+        <ion-button class="custom-button" expand="block" fill="solid" (click)="goToPesanan()">
+          <ion-icon name="cart-outline" slot="start"></ion-icon>
+          Pesanan Makanan
+          <ion-badge color="danger" class="notif-badge">4</ion-badge>
+        </ion-button>
+      </ion-col>
+      <ion-col size="5.5">
+        <ion-button class="custom-button" expand="block" fill="solid" (click)="goToScanKaryawan()">
+          <ion-icon name="people-outline" slot="start"></ion-icon>
+          Scan Karyawan
+          <ion-badge color="danger" class="notif-badge">4</ion-badge>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Scan Karyawan Section -->
+  <div class="section-header">
+    <b>Scan Karyawan</b>
+    <div class="lihat-semua-wrapper" (click)="goToPesanan()">Lihat Semua →</div>
+  </div>
+  <div class="card-section">
+    <div class="card-body">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Shift</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Mayla Faza Herliani</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Mohammad Yusuf Hamdani</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Pesanan Makanan Section -->
+  <div class="section-header">
+    <b>Pesanan Makanan</b>
+    <div class="lihat-semua-wrapper" (click)="goToPesanan()">Lihat Semua →</div>
+  </div>
+  <div class="card-section">
+    <div class="card-body">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Makanan</th>
+            <th>Porsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Nasi Goreng</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Mie Ayam</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="scan" class="center-scan-button" (click)="goToBarcode()">
+      <div class="scan-circle">
+        <ion-icon name="scan-outline"></ion-icon>
+      </div>
+    </ion-tab-button>
+    <ion-tab-button tab="menu">
+      <ion-icon name="grid-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
