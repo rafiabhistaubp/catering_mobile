@@ -1,28 +1,53 @@
-ion-content {
+/* barcodek.page.scss */
+
+/* Mengatur tata letak kontainer */
+.page-container {
   display: flex;
-  justify-content: center; /* Memusatkan konten secara horizontal */
-  align-items: center; /* Memusatkan konten secara vertikal */
   flex-direction: column;
-  height: 100%; /* Pastikan konten memenuhi seluruh tinggi layar */
-  text-align: center;
-  padding: 10px;
-  --background: #ffffff;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Warna latar belakang yang lembut */
+  font-family: Arial, sans-serif;
 }
 
-canvas {
+/* Styling untuk gambar QR Code */
+img {
+  width: 256px; /* Ukuran gambar QR Code */
+  height: 256px; /* Ukuran gambar QR Code */
+  border: 3px solid #4CAF50; /* Border hijau untuk memberikan kontras */
+  border-radius: 10px; /* Sudut membulat untuk QR Code */
   margin-top: 50px;
-  max-width: 100%; /* Pastikan canvas dapat menyesuaikan dengan lebar layar */
-  max-height: 100%; /* Pastikan canvas dapat menyesuaikan dengan tinggi layar */
+  margin-left: 80px;
 }
 
-button {
-  margin-top: 20px;
-  padding: 10px;
-  font-size: 16px;
+/* Styling untuk teks countdown */
+p{
+  font-size: 24px; /* Ukuran font yang lebih besar untuk timer */
+  font-weight: bold; /* Membuat teks lebih tebal */
+  color: red; /* Warna teks gelap */
+  padding: 10px 20px;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan lembut untuk efek 3D */
+  margin-top: 10px; /* Memberikan jarak antara QR Code dan timer */
+  margin-bottom: 200px;
+  margin-left: 50px;
 }
 
-div {
-  font-size: 18px;
-  color: black; /* Menyesuaikan warna teks dengan tema gelap */
-  margin-top: 10px;
+/* Efek hover pada gambar QR Code */
+img:hover {
+  transform: scale(1.05); /* Membesarkan gambar sedikit saat hover */
+  transition: transform 0.3s ease-in-out; /* Transisi lembut saat hover */
+}
+
+/* Styling untuk keseluruhan halaman */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Menambahkan padding pada kontainer utama */
+.container {
+  padding: 20px;
 }

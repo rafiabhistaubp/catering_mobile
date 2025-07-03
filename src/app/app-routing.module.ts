@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -25,27 +26,41 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule),
+    canActivate: [AuthGuard],
+    data: { role: 'admin' }
   },
   {
     path: 'pesanan',
-    loadChildren: () => import('./pesanan/pesanan.module').then( m => m.PesananPageModule)
+    loadChildren: () => import('./pesanan/pesanan.module').then( m => m.PesananPageModule),
+    canActivate: [AuthGuard],
+    data: { role: 'admin' }
   },
   {
     path: 'scan',
-    loadChildren: () => import('./scan/scan.module').then( m => m.ScanPageModule)
+    loadChildren: () => import('./scan/scan.module').then( m => m.ScanPageModule),
+    canActivate: [AuthGuard],
+    data: { role: 'admin' }
   },
   {
     path: 'barcode',
-    loadChildren: () => import('./barcode/barcode.module').then( m => m.BarcodePageModule)
+    loadChildren: () => import('./barcode/barcode.module').then( m => m.BarcodePageModule),
+    canActivate: [AuthGuard],
+    data: { role: 'admin' }
   },
   {
     path: 'laporan',
-    loadChildren: () => import('./laporan/laporan.module').then( m => m.LaporanPageModule)
+    loadChildren: () => import('./laporan/laporan.module').then( m => m.LaporanPageModule),
+    canActivate: [AuthGuard],
+    data: { role: 'admin' }
   },
   {
     path: 'barcodek',
-    loadChildren: () => import('./barcodek/barcodek.module').then( m => m.BarcodekPageModule)
+    loadChildren: () => import('./barcodek/barcodek.module').then( m => m.BarcodekPageModule),
+  },
+  {
+    path: 'form-pesanan',
+    loadChildren: () => import('./form-pesanan/form-pesanan.module').then( m => m.FormPesananPageModule)
   }
 
   

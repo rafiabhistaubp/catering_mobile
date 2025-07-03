@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">Kembali</ion-button>
+    </ion-buttons>
+    <ion-title>Form Pesanan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="submitPesanan(pesanan)">
+    <!-- Input Nama Makanan -->
+    <ion-item>
+      <ion-label position="floating">Nama Makanan</ion-label>
+      <ion-input [(ngModel)]="pesanan.nama_makanan" name="nama_makanan" required></ion-input>
+    </ion-item>
+
+    <!-- Input Porsi -->
+    <ion-item>
+      <ion-label position="floating">Porsi</ion-label>
+      <ion-input [(ngModel)]="pesanan.porsi" name="porsi" type="number" required></ion-input>
+    </ion-item>
+
+    <!-- Input Tanggal Pesanan -->
+    <ion-item>
+      <ion-label position="floating">Tanggal Pesanan</ion-label>
+      <ion-input [(ngModel)]="pesanan.untuk_tanggal" name="untuk_tanggal" type="date" required></ion-input>
+    </ion-item>
+
+    <!-- Input Deskripsi -->
+    <ion-item>
+      <ion-label position="floating">Deskripsi</ion-label>
+      <ion-input [(ngModel)]="pesanan.deskripsi" name="deskripsi" required></ion-input>
+    </ion-item>
+
+    <!-- Input Shift -->
+    <ion-item>
+      <ion-label position="floating">Shift</ion-label>
+      <ion-select [(ngModel)]="pesanan.shift" name="shift" required>
+        <ion-select-option value="1">Shift 1</ion-select-option>
+        <ion-select-option value="2">Shift 2</ion-select-option>
+        <ion-select-option value="3">Shift 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Input Foto -->
+    <ion-item>
+      <ion-label>Foto</ion-label>
+      <input type="file" (change)="onFileChange($event)" required />
+      
+      <!-- Menampilkan nama file yang dipilih -->
+      <p *ngIf="pesanan.fotoName">Foto Terpilih: {{ pesanan.fotoName }}</p> <!-- Menampilkan nama file -->
+
+      <!-- Menampilkan gambar preview jika fotoURL ada -->
+      <img *ngIf="pesanan.fotoURL" [src]="pesanan.fotoURL" alt="Preview Foto" width="100" height="100" />
+    </ion-item>
+
+    <!-- Tombol Kirim -->
+    <ion-button expand="full" type="submit" [disabled]="loading || !pesanan.fotoURL">Kirim Pesanan</ion-button>
+  </form>
+</ion-content>

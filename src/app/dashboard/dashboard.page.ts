@@ -11,10 +11,11 @@ export class DashboardPage {
   constructor(private navCtrl: NavController) {}
 
   goToPesanan() {
+    console.log('Navigating to Pesanan...');
     this.navCtrl.navigateForward('/pesanan');
   }
 
-  goToScanKaryawan() {
+  goToScanKaryawan() {  
     this.navCtrl.navigateForward('/scan-karyawan');
   }
 

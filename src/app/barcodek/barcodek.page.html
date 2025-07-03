@@ -1,18 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Barcode Page</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- barcodek.page.html -->
+<div *ngIf="generatedQRCode">
+  <img [src]="generatedQRCode" alt="Generated QR Code" />
+</div>
 
-<ion-content>
-  <!-- Canvas element for QR Code rendering -->
-  <canvas #qrCodeCanvas></canvas> <!-- Use canvas to render QR Code -->
-
-  <!-- Display the countdown timer -->
-  <div>
-    <p>{{ countdownTime }} seconds</p> <!-- Display the countdown time -->
-  </div>
-
-  <!-- Button to generate new barcode -->
-  <button (click)="generateNewBarcode()">Generate New QR Code</button>
-</ion-content>
+<!-- Menampilkan waktu hitung mundur -->
+<p>Waktu hitung mundur: {{ countdownTime }} detik</p>
